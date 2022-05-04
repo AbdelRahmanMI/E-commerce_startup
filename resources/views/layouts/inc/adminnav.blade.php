@@ -8,17 +8,23 @@
       <h6 class="font-weight-bolder mb-0">Dashboard</h6>
     </nav>
     <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-      <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+      {{-- <div class="ms-md-auto pe-md-3 d-flex align-items-center">
         <div class="input-group input-group-outline">
           <label class="form-label">Type here...</label>
           <input type="text" class="form-control">
         </div>
-      </div>
-      <ul class="navbar-nav  justify-content-end">
+      </div> --}}
+      <ul class="navbar-nav  ms-md-auto pe-md-3 d-flex align-items-center">
         <li class="nav-item d-flex align-items-center">
-          <a href="javascript:;" class="nav-link text-body font-weight-bold px-0">
-            <i class="fa fa-user me-sm-1"></i>
-            <span class="d-sm-inline d-none">Sign In</span>
+          
+          <a class="nav-link text-body font-weight-bold px-0" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                      document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+              @csrf
+            </form>
           </a>
         </li>
         <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
