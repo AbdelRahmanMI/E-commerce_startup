@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('slug');
             $table->longText('description');
             $table->tinyInteger('status')->default('0');
+            $table->string('image');
             $table->timestamps();
         });
     }

@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CategoyController extends Controller
+class frontendController extends Controller
 {
     public function index()
     {
-        return "Hello!";
+        return view('admin.index');
     }
 }
