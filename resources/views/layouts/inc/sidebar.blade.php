@@ -11,7 +11,7 @@
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link text-white active bg-gradient-primary" href="{{ url('dashboard') }}">
+          <a class="nav-link text-white {{ Request::is('dashboard')? 'bg-gradient-primary':'' }} " href="{{ url('dashboard') }}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">dashboard</i>
             </div>
@@ -19,7 +19,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="{{ url('categories') }}">
+          <a class="nav-link text-white {{ Request::is('categories')? 'bg-gradient-primary':'' }} " href="{{ url('categories') }}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">category</i>
             </div>
@@ -28,28 +28,27 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link text-white " href="{{ url('add-category') }}">
+          <a class="nav-link text-white {{ Request::is('add-category') ? 'bg-gradient-primary':'' }}" href="{{ url('add-category') }}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">addcategory</i>
             </div>
             <span class="nav-link-text ms-1">Add Category</span>
           </a>
         </li>
-        
         <li class="nav-item">
           <a class="nav-link text-white " href="">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">notifications</i>
+              <i class="material-icons opacity-10">table_view</i>
             </div>
-            <span class="nav-link-text ms-1">Notifications</span>
+            <span class="nav-link-text ms-1">Products</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white " href="">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">person</i>
+              <i class="material-icons opacity-10">addtable_view</i>
             </div>
-            <span class="nav-link-text ms-1">Profile</span>
+            <span class="nav-link-text ms-1">Add Products</span>
           </a>
         </li>
       </ul>
