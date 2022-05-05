@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ProductController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -14,12 +16,19 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
  Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/dashboard','App\Http\Controllers\Admin\frontendController@index');
-
-    Route::get('categories','App\Http\Controllers\Admin\CategoryController@index');
-    Route::get('add-category','App\Http\Controllers\Admin\CategoryController@add');
-    Route::post('insert-category','App\Http\Controllers\Admin\CategoryController@insert');
+    
+    //                        Routes For Categories
+    Route::get('categories',[CategoryController::class ,'index']);
+    Route::get('add-category',[CategoryController::class ,'add']);
+    Route::post('insert-category',[CategoryController::class ,'insert']);
     Route::get('edit-category/{id}' , [CategoryController::class ,'edit']);
     Route::put('update-category/{id}',[CategoryController::class , 'update']);
     Route::get('delete-category/{id}', [CategoryController::class , 'destroy']);
+
+    //                        Routes For Products
+
+    Route::get('product',[ProductController::class ,'index']);
+    Route::get('add-product',[ProductController::class ,'add']);
+    Route::post('insert-product',[ProductController::class ,'insert']);
      });
  

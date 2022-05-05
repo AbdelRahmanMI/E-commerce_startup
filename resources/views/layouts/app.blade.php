@@ -81,5 +81,17 @@
     
     <!-- Scripts -->
     <script src="{{ asset('frontend\js\bootstrap.bundle.min.js') }}" defer></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @if (session('status'))
+        <script>
+            // swal("{{ session('status') }}","{{ session('stat') }}");
+            swal({
+                title: "Good job!",
+                text: "{{ session('message') }}",
+                icon: "{{ session('status') }}",
+            });
+        </script>
+    @endif
 </body>
 </html>

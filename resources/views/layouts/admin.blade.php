@@ -59,7 +59,12 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @if (session('status'))
         <script>
-            swal("{{ session('status') }}");
+            // swal("{{ session('status') }}","{{ session('stat') }}");
+            swal({
+                title: "Good job!",
+                text: "{{ session('message') }}",
+                icon: "{{ session('status') }}",
+            });
         </script>
     @endif
     @yield('scripts')

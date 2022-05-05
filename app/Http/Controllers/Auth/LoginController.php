@@ -32,11 +32,11 @@ class LoginController extends Controller
     {
         if(Auth::user()->role_as == '1') //1 = Admin Login
         {
-            return redirect('dashboard')->with('status','Welcome to your dashboard');
+            return redirect('dashboard')->with('message','Welcome to your dashboard')->with('status',"success");
         }
         elseif(Auth::user()->role_as == '0') // Normal or Default User Login
         {
-            return redirect('/')->with('status','Logged in successfully');
+            return redirect('/')->with('message','Logged in successfully')->with('status',"success");
         }
     }
 
