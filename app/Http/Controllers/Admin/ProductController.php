@@ -45,4 +45,52 @@ class ProductController extends Controller
         $product->save();
         return redirect('product')->with('message',"Product Added Successfully")->with('status',"success");
     }
+
+    public function edit($id)
+    {
+        $category = Category::all();
+        $product = Product::find($id);
+        return view('admin.product.edit', compact('product','category'));
+    }
+
+    public function update(Request $request , $id)
+    {
+        $product = Product::find($id);
+        if($request->hasFile('image'))
+        {
+            $path = 'assets/uploads/product/'.$product->image;
+            if(File::exists($path))
+            {
+                File::delete($path);
+            }
+            $file = $request->file('image');
+            $ext = $file->getClientOriginalExtension();
+            $filename = time().'.'.$ext;
+            $file->move('assets/uploads/product/',$filename);
+            $product->image = $filename;
+        }
+        $product->name = $request->input('name');
+        $product->small_description = $request->input('small_description');
+        $product->description = $request->input('description');
+        $product->price = $request->input('price');
+        $product->quantity = $request->input('quantity');
+        $product->status = $request->input('status') == TRUE ? '1':'0';
+        $product->update();
+        return redirect('/product')->with('message',"Product Updated Successfully")->with('status',"success");
+    }
+
+    public function destroy($id)
+    {
+        $product = Product::find($id);
+        if($product->image)
+        {
+            $path = 'assets/uploads/product/'.$product->image;
+            if(File::exists($path))
+            {
+                File::delete($path);
+            }
+        }
+        $product->delete();
+        return redirect('product')->with('message',"Product Deleted Successfully")->with('status',"success");
+    }
 }

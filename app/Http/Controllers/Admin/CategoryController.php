@@ -36,7 +36,7 @@ class CategoryController extends Controller
         $category->description = $request->input('description');
         $category->status = $request->input('status') == TRUE ? '1':'0';
         $category->save();
-        return redirect('/dashboard')->with('message',"Category Added Successfully")->with('status',"success");
+        return redirect('/categories')->with('message',"Category Added Successfully")->with('status',"success");
     }
 
     public function edit($id)
@@ -66,7 +66,7 @@ class CategoryController extends Controller
         $category->description = $request->input('description');
         $category->status = $request->input('status') == TRUE ? '1':'0';
         $category->update();
-        return redirect('/dashboard')->with('message',"Category Updated Successfully")->with('status',"success");
+        return redirect('/categories')->with('message',"Category Updated Successfully")->with('status',"success");
     }
 
     public function destroy($id)
