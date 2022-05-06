@@ -3,7 +3,7 @@
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0"  target="_blank">
-        <img src="{{URL::asset('/images/logo-ct.png')}}" class="navbar-brand-img h-100" alt="main_logo">
+        <img src="{{URL::asset('/images/transparant bg.png')}}" class="navbar-brand-img h-100" alt="main_logo">
         <span class="ms-1 font-weight-bold text-white">Admin Panel</span>
       </a>
     </div>
@@ -53,8 +53,10 @@
         </li>
       </ul>
     </div>
+    
     <div class="sidenav-footer position-absolute w-100 bottom-0 ">
       <div class="mx-3">
+        <a class="btn bg-gradient-success mt-4 w-100" href='/' type="button">Go to User Side</a>
         <a class="btn bg-gradient-primary mt-4 w-100" href="https://github.com/AbdelRahmanMI/E-commerce_startup" type="button">Source Code Here !</a>
       </div>
     </div>
