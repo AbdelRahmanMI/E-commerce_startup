@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
             <a class="nav-link active" aria-current="page" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Our Products</a>
+            <a class="nav-link" href="{{ url('category') }}">Our Categories</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Blog</a>
@@ -34,8 +34,8 @@ use Illuminate\Support\Facades\Auth;
                 </form>
             </li>
             
-            <li class="nav-item ">
-                <a class="nav-link " href='/dashboard'  role="button"  aria-expanded="false">
+            <li class="nav-item active ">
+                <a class="nav-link  " href='/dashboard'  role="button"  aria-expanded="false">
                     @if (Auth::check())
                     {{ Auth::user()->name }}
                      @else

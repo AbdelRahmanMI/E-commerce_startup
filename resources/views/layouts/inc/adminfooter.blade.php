@@ -8,7 +8,7 @@
                   document.write(new Date().getFullYear())
                 </script>,
                 made with <i class="fa fa-heart"></i> by
-                <a href="" class="font-weight-bold" target="_blank">Abdelrahman Mohamed</a>
+                <a href="https://github.com/AbdelRahmanMI" class="font-weight-bold" target="_blank">Abdelrahman Mohamed</a>
                 for a better web.
               </div>
             </div>

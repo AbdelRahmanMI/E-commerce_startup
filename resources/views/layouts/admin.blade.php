@@ -61,7 +61,7 @@
         <script>
             // swal("{{ session('status') }}","{{ session('stat') }}");
             swal({
-                title: "Good job!",
+                title: "",
                 text: "{{ session('message') }}",
                 icon: "{{ session('status') }}",
             });
