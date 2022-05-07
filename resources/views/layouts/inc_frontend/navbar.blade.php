@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
             <a class="nav-link active" aria-current="page" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('category') }}">Our Categories</a>
+            <a class="nav-link" href="{{ url('category') }}">Categories</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Blog</a>

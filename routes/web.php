@@ -10,9 +10,12 @@ use App\Http\Controllers\Frontend\FrontEndController;
 //     return view('welcome');
 // });
 
+//                          Routes For FrontEnd
+
 Route::get('/', [FrontEndController::class , 'index']);
 Route::get('category',[FrontEndController::class , 'category']);
-
+Route::get('view-category/{slug}', [FrontEndController::class , 'viewcategory']);
+Route::get('category/{slug}/{name}', [ FrontEndController::class , 'productview']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

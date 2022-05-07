@@ -18,7 +18,12 @@
     <link href="{{ asset('frontend/css/bootstrap5.css') }}" rel="stylesheet">
 
 
-        
+    <style>
+        a{
+            text-decoration: none !important;
+            color: black;
+        }
+    </style>
 </head>
 <body>
     @include('layouts.inc_frontend.navbar')
