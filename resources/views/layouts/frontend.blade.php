@@ -27,6 +27,8 @@
 </head>
 <body>
     @include('layouts.inc_frontend.navbar')
+
+    
     <div>
         @yield('content')
     </div>

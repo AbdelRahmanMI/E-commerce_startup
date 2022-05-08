@@ -7,7 +7,7 @@
             <h4>{{ $category->name }}</h4>
             @foreach ($product as $item)
                 <div class="col-md-3 mt-3">
-                    <a href="{{ url('category/'.$category->slug.'/'.$item->name) }}">
+                    <a href="{{ url('category/'.$item->category->slug.'/'.$item->name) }}">
                         <div class="card">
                             <img src="{{ asset('assets/uploads/product/'.$item->image) }}" alt="Product image">
                             <div class="card-body">

@@ -1,7 +1,3 @@
-<?php
-
-use Illuminate\Support\Facades\Auth;
-?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="#">
@@ -77,3 +73,5 @@ use Illuminate\Support\Facades\Auth;
       </div>
     </div>
   </nav>
+
+  

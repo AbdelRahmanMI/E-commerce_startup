@@ -15,7 +15,7 @@
                             <label style="font-size: 16px;" class="float-end badge bg-danger trending_tag">Hot Deal</label>
                         </h2>
                         <hr>
-                        <label class="fw-bold">Price : {{ $product->price }} $</label>
+                        <label class="fw-bold text-danger">Price : {{ $product->price }} $</label>
                         <p class="mt-3">
                             {!! $product->small_description !!}
                         </p>
