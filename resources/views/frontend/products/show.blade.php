@@ -180,11 +180,8 @@
                         @else
                             <label  class="badge bg-danger">Out Of Stock</label>
                         @endif
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col"></div>
-                    <div class="col-md-8">
+                        <br>
+                        <hr>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Rate This Product
                         </button>
