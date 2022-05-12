@@ -27,6 +27,7 @@ class RatingController extends Controller
                 $existing->phone = $phone;
                 $existing->content = $content;
                 $existing->update();
+                return redirect()->back()->with('message',"Review updated Successfuly")->with('status',"success");
             }
             else
             {
@@ -39,8 +40,9 @@ class RatingController extends Controller
                 'content'=>$content,
                 'stars_rated'=>$stars_rated
                 ]);
+                return redirect()->back()->with('message',"Thank You For Rating This Product")->with('status',"success");
             }
-            return redirect()->back()->with('message',"Thank You For Rating This Product")->with('status',"success");
+            
         }
         else    
         {
