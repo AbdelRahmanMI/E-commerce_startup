@@ -165,6 +165,8 @@
                             <label style="font-size: 16px;" class="float-end badge bg-danger trending_tag">Hot Deal</label>
                         </h2>
                         <hr>
+                        <label style="font-size: 16px;" class="float badge bg-primary trending_tag">Category: {{ $product->category->name }}</label>
+                        <hr>
                         <label class="fw-bold text-danger">Price : {{ $product->price }} $</label><br><br>
                         <label class="fw ">
                             @for ($starsChecked=1; $starsChecked<=number_format($average_rating) ; $starsChecked++ )
